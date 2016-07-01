@@ -1,0 +1,15 @@
+# Items schema
+
+# --- !Ups
+
+CREATE TABLE ITEM (
+    ID bigint(20) NOT NULL AUTO_INCREMENT,
+    TITLE varchar(255) NOT NULL,
+    DESCRIPTION varchar(255) NOT NULL,
+    RESERVED BIT(1) DEFAULT FALSE NOT NULL,
+    PRIMARY KEY (id)
+);
+
+# --- !Downs
+
+DROP TABLE ITEM;

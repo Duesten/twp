@@ -1,0 +1,43 @@
+.search-box{
+    width:450px;
+}
+
+.centered {
+    margin : 0 auto;
+}
+
+.mt10 {
+    margin-top : 10px;
+}
+
+.text-centered{
+    text-align: center;
+}
+
+.block{
+    display:block;
+}
+
+.item-list-item{
+
+}
+
+.item-frame{
+    margin-top:50px;
+}
+
+.item-details{
+    padding: 10px;
+    background-color: #F6F1EE;
+}
+
+.item-title{
+    background-color: #D2B9A6;
+    height: 1%;
+    padding: 6px 0 8px 10px;
+}
+
+.item-description{
+    background-color : #fff;
+}
+

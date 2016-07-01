@@ -1,0 +1,30 @@
+@(user: User)(implicit messages: Messages)
+
+@import helper._
+
+@main("User " + user.name) {
+    <div class="container">
+
+        <h1>@user.name</h1>
+
+        <form action="@routes.Users.edit(user.id)" method="post">
+            <input type="text" name="name" id="name" value="@user.name">
+            <input type="password" name="password" id="password" placeholder="New password" value="">
+            <button type="submit">Update</button>
+        </form>
+
+        <form action="@routes.Users.delete(user.id)" method="post">
+            <span>
+                <input type="hidden" name="id" id="id" value="@user.id">
+                <button type="submit">Delete item</button>
+            </span>
+        </form>
+
+        <h1>
+            <a href="@routes.Users.list()">Back to users</a>
+        </h1>
+
+
+    </div>
+
+}

@@ -1,0 +1,36 @@
+@(items: Seq[Item], itemCreationForm: Form[ItemData])(implicit messages: Messages)
+
+@import helper._
+
+@main("Items") {
+    <div class="container">
+
+        <h1>@items.size items</h1>
+
+        <img src="@routes.Assets.versioned("images/tpb.jpg")" class="img-responsive centered" />
+
+        <ul>
+            @items.map { item =>
+                <li>
+                    <form action="@routes.Items.delete(item.id)" method="post">
+                        <span>
+                            @item.title
+                            <a href="@routes.Items.show(item.id)">(view)</a>
+                            <input type="hidden" name="id" id="id" value="@item.id">
+                            <button type="submit">Delete item</button>
+                        </span>
+                    </form>
+                </li>
+            }
+        </ul>
+
+        @form(routes.Items.create()) {
+            @inputText(itemCreationForm("title"),'_label -> "Title",'_showConstraints -> false )
+            @inputText(itemCreationForm("description"),'_label -> "Description",'_showConstraints -> false )
+            <button type="submit" class="btn btn-info">Create item</button>
+            <button type="reset" class="btn btn-danger">Clear form</button>
+        }
+
+    </div>
+
+}

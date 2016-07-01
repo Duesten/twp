@@ -1,0 +1,33 @@
+@(users: Seq[User], userCreationForm: Form[UserData])(implicit messages: Messages)
+
+@import helper._
+
+@main("Users") {
+    <div class="container">
+
+        <h1>@users.size users</h1>
+
+        <ul>
+            @users.map { user =>
+                <li>
+                    <form action="@routes.Users.delete(user.id)" method="post">
+                        <span>
+                            @user.name
+                            <a href="@routes.Users.show(user.id)">(view)</a>
+                            <input type="hidden" name="id" id="id" value="@user.id">
+                            <button type="submit">Delete user</button>
+                        </span>
+                    </form>
+                </li>
+            }
+        </ul>
+
+        @form(routes.Users.create()) {
+            @inputText(userCreationForm("name"),'_label -> "Username",'_showConstraints -> false )
+            @inputPassword(userCreationForm("password"),'_label -> "Password",'_showConstraints -> false )
+            <button type="submit" class="btn btn-info">Create user</button>
+            <button type="reset" class="btn btn-danger">Clear form</button>
+        }
+    </div>
+
+}
