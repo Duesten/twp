@@ -25,7 +25,7 @@ class UserDAO @Inject()(val dbConfigProvider: DatabaseConfigProvider) extends Ha
                 id bigserial NOT NULL,
                 username character varying,
                 password character varying,
-                CONSTRAINT pk PRIMARY KEY (id)
+                CONSTRAINT pk2 PRIMARY KEY (id)
                 )""")
   }
 
