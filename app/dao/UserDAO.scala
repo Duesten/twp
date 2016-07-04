@@ -21,7 +21,7 @@ class UserDAO @Inject()(val dbConfigProvider: DatabaseConfigProvider) extends Ha
   def delete(userId: Long): Future[Unit] = db.run(Users.filter(_.id === userId).delete).map { _ => () }
   def all(): Future[Seq[User]] = db.run(Users.result)
 
-  private class UsersTable(tag: Tag) extends Table[User](tag, "item") {
+  private class UsersTable(tag: Tag) extends Table[User](tag, "users") {
 
     def id = column[Long]("ID",O.PrimaryKey, O.AutoInc)
     def name = column[String]("NAME")
