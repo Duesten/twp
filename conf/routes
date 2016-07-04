@@ -26,7 +26,7 @@ POST    /items/:id/edit             controllers.Items.edit(id: Long)
 POST    /items/:id/delete           controllers.Items.delete(id : Long)
 POST    /items/:id/reserve          controllers.Items.reserve(id : Long)
 
-
+GET     /init                       controllers.HomeController.index
 
 
 
