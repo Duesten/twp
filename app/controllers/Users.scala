@@ -8,6 +8,8 @@ import play.api.data.Forms._
 import play.api.data._
 import play.api.i18n.{I18nSupport, MessagesApi, Messages}
 import play.api.mvc.{Action, Controller}
+import slick.backend.DatabaseConfig
+import slick.driver.JdbcProfile
 import scala.concurrent.ExecutionContext.Implicits.global
 
 @Singleton
@@ -71,6 +73,11 @@ class Users @Inject() (userDao: UserDAO, val messagesApi: MessagesApi) extends C
     } yield Redirect(routes.Users.list())
   }
 
+  def init() = Action.async { implicit rs =>
+    for {
+      _ <- userDao.init()
+    } yield Redirect(routes.Users.list())
+  }
 
 
 }

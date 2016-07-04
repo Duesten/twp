@@ -20,6 +20,22 @@ class UserDAO @Inject()(val dbConfigProvider: DatabaseConfigProvider) extends Ha
   def update(user:User): Future[Unit] = db.run(Users.filter(_.id === user.id).update(user)).map { _ => () }
   def delete(userId: Long): Future[Unit] = db.run(Users.filter(_.id === userId).delete).map { _ => () }
   def all(): Future[Seq[User]] = db.run(Users.result)
+  def init() : Future[Int] = {
+          db.run(sqlu"""CREATE TABLE user(
+                id bigserial NOT NULL,
+                name character varying,
+                password character varying,
+                CONSTRAINT pk PRIMARY KEY (id);
+                )""")
+
+    db.run(sqlu"""CREATE TABLE item(
+                id bigserial NOT NULL,
+                title character varying,
+                description character varying,
+                reserved BOOLEAN DEFAULT FALSE,
+                CONSTRAINT pk PRIMARY KEY (id);
+                )""")
+  }
 
   private class UsersTable(tag: Tag) extends Table[User](tag, "users") {
 
