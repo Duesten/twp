@@ -4,4 +4,4 @@ CREATE TABLE item(
     description character varying,
     reserved BOOLEAN DEFAULT FALSE,
     CONSTRAINT pk PRIMARY KEY (id)
-);
+)

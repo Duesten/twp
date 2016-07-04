@@ -3,4 +3,4 @@ CREATE TABLE users(
     name character varying,
     password character varying,
     CONSTRAINT pk PRIMARY KEY (id)
-);
+)
