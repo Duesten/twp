@@ -24,7 +24,7 @@ class ItemDAO @Inject()(val dbConfigProvider: DatabaseConfigProvider) extends Ha
   def likeSearch(query : String) : Future[Seq[Item]] = db.run(Items.filter(i => i.description.toLowerCase.like('%' + query.toLowerCase + '%') || i.title.toLowerCase.like('%' + query.toLowerCase + '%')).result)
   def luckySearch(query : String) : Future[Option[Item]] = db.run(Items.filter(_.title.toLowerCase like ("%" + query.toLowerCase + "%")).result.headOption)
 
-  private class ItemsTable(tag: Tag) extends Table[Item](tag, "ITEM") {
+  private class ItemsTable(tag: Tag) extends Table[Item](tag, "item") {
 
     def id = column[Long]("ID",O.PrimaryKey, O.AutoInc)
     def title = column[String]("TITLE")
