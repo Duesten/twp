@@ -1,6 +1,6 @@
 CREATE TABLE users(
-    ID bigserial NOT NULL,
-    USERNAME character varying,
-    PASSWORD character varying,
-    CONSTRAINT pk PRIMARY KEY (ID)
+    id bigserial NOT NULL,
+    name character varying,
+    password character varying,
+    CONSTRAINT pk PRIMARY KEY (id)
 );

@@ -26,10 +26,10 @@ class ItemDAO @Inject()(val dbConfigProvider: DatabaseConfigProvider) extends Ha
 
   private class ItemsTable(tag: Tag) extends Table[Item](tag, "item") {
 
-    def id = column[Long]("ID",O.PrimaryKey, O.AutoInc)
-    def title = column[String]("TITLE")
-    def description = column[String]("DESCRIPTION")
-    def reserved = column[Boolean]("RESERVED")
+    def id = column[Long]("id",O.PrimaryKey, O.AutoInc)
+    def title = column[String]("title")
+    def description = column[String]("description")
+    def reserved = column[Boolean]("reserved")
 
     def * = (id, title, description,reserved) <> (Item.tupled, Item.unapply _)
   }

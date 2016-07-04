@@ -9,6 +9,7 @@ import play.api.mvc.Action
 class HomeController extends Controller {
 
   def index = Action { implicit request =>
+
     Ok(views.html.index())
   }
 

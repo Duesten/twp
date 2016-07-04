@@ -23,9 +23,9 @@ class UserDAO @Inject()(val dbConfigProvider: DatabaseConfigProvider) extends Ha
 
   private class UsersTable(tag: Tag) extends Table[User](tag, "users") {
 
-    def id = column[Long]("ID",O.PrimaryKey, O.AutoInc)
-    def name = column[String]("NAME")
-    def password = column[String]("PASSWORD")
+    def id = column[Long]("id",O.PrimaryKey, O.AutoInc)
+    def name = column[String]("name")
+    def password = column[String]("password")
 
     def * = (id, name, password) <> (User.tupled, User.unapply _)
   }

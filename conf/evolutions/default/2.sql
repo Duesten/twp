@@ -1,7 +1,7 @@
 CREATE TABLE item(
-    ID bigserial NOT NULL,
-    TITLE character varying,
-    DESCRIPTION character varying,
-    RESERVED BOOLEAN DEFAULT FALSE,
-    CONSTRAINT pk PRIMARY KEY (ID)
+    id bigserial NOT NULL,
+    title character varying,
+    description character varying,
+    reserved BOOLEAN DEFAULT FALSE,
+    CONSTRAINT pk PRIMARY KEY (id)
 );
