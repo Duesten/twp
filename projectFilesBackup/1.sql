@@ -1,4 +1,5 @@
-CREATE TABLE users(
+CREATE TABLE users
+(
     id bigserial NOT NULL,
     name character varying,
     password character varying,

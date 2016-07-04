@@ -1,4 +1,5 @@
-CREATE TABLE item(
+CREATE TABLE item
+(
     id bigserial NOT NULL,
     title character varying,
     description character varying,
