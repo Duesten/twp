@@ -21,9 +21,9 @@ class UserDAO @Inject()(val dbConfigProvider: DatabaseConfigProvider) extends Ha
   def delete(userId: Long): Future[Unit] = db.run(Users.filter(_.id === userId).delete).map { _ => () }
   def all(): Future[Seq[User]] = db.run(Users.result)
   def init() : Future[Int] = {
-          db.run(sqlu"""CREATE TABLE IF NOT EXISTS users(
+    db.run(sqlu"""CREATE TABLE IF NOT EXISTS users(
                 id bigserial NOT NULL,
-                name character varying,
+                username character varying,
                 password character varying,
                 CONSTRAINT pk PRIMARY KEY (id)
                 )""")
@@ -44,7 +44,7 @@ class UserDAO @Inject()(val dbConfigProvider: DatabaseConfigProvider) extends Ha
   private class UsersTable(tag: Tag) extends Table[User](tag, "users") {
 
     def id = column[Long]("id",O.PrimaryKey, O.AutoInc)
-    def name = column[String]("name")
+    def name = column[String]("username")
     def password = column[String]("password")
 
     def * = (id, name, password) <> (User.tupled, User.unapply _)
