@@ -27,18 +27,6 @@ class UserDAO @Inject()(val dbConfigProvider: DatabaseConfigProvider) extends Ha
                 password character varying,
                 CONSTRAINT pk PRIMARY KEY (id)
                 )""")
-
-    println("FUCK YOU")
-
-    db.run(sqlu"""CREATE TABLE IF NOT EXISTS item(
-                id bigserial NOT NULL,
-                title character varying,
-                description character varying,
-                reserved BOOLEAN DEFAULT FALSE,
-                CONSTRAINT pk PRIMARY KEY (id)
-                )""")
-
-
   }
 
   private class UsersTable(tag: Tag) extends Table[User](tag, "users") {
