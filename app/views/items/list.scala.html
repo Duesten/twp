@@ -7,9 +7,14 @@
 
         <h1>@items.size items</h1>
 
-        <img src="@routes.Assets.versioned("images/tpb.jpg")" class="img-responsive centered" />
+        @*<img src="@routes.Assets.versioned("images/tpb.jpg")" class="img-responsive centered" />*@
 
-        <ul>
+        <div class="result-list-header">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="result-list">
             @items.map { item =>
                 <li>
                     <form action="@routes.Items.delete(item.id)" method="post">
