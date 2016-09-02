@@ -5,9 +5,46 @@
 @main("Items") {
     <div class="container">
 
-        <h1>@items.size items</h1>
+        <h1>@items.size results</h1>
 
         @*<img src="@routes.Assets.versioned("images/tpb.jpg")" class="img-responsive centered" />*@
+
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Type
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Creators
+                    </th>
+                    <th>
+                        Year
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @items.map { item =>
+                    <tr>
+                        <td>N/A</td>
+                        <td><a href="@routes.Items.show(item.id)">@item.title</a></td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    @*<form action="@routes.Items.delete(item.id)" method="post">*@
+                        @*<span>*@
+                            @*<input type="hidden" name="id" id="id" value="@item.id">*@
+                            @*<button type="submit">Delete item</button>*@
+                        @*</span>*@
+                    @*</form>*@
+                }
+
+            </tbody>
+        </table>
 
         <div class="result-list-header">
             <span>One</span>
@@ -20,8 +57,7 @@
                 <li>
                     <form action="@routes.Items.delete(item.id)" method="post">
                         <span>
-                            @item.title
-                            <a href="@routes.Items.show(item.id)">(view)</a>
+                            <a href="@routes.Items.show(item.id)">@item.title</a>
                             <input type="hidden" name="id" id="id" value="@item.id">
                             <button type="submit">Delete item</button>
                         </span>

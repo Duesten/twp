@@ -40,7 +40,13 @@
 .item-description{
     background-color : #fff;
 }
+.result-list{
 
+}
+.result-list ul{
+    padding:0;
+    list-style: none;
+}
 .result-list-header{
     background: #D2B9A6;
 }
