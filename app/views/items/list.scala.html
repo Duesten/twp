@@ -5,12 +5,12 @@
 @main("Items") {
     <div class="container">
 
-        <h1>@items.size results</h1>
+        @*<h1>@items.size results</h1>*@
 
         @*<img src="@routes.Assets.versioned("images/tpb.jpg")" class="img-responsive centered" />*@
 
-        <table>
-            <thead>
+        <table class="result-list">
+            <thead class="result-list-header">
                 <tr>
                     <th>
                         Type
@@ -26,7 +26,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="result-list-results">
 
                 @items.map { item =>
                     <tr>
@@ -46,25 +46,25 @@
             </tbody>
         </table>
 
-        <div class="result-list-header">
-            <span>One</span>
-            <span>Two</span>
-            <span>Three</span>
-            <span>Four</span>
-        </div>
-        <ul class="result-list">
-            @items.map { item =>
-                <li>
-                    <form action="@routes.Items.delete(item.id)" method="post">
-                        <span>
-                            <a href="@routes.Items.show(item.id)">@item.title</a>
-                            <input type="hidden" name="id" id="id" value="@item.id">
-                            <button type="submit">Delete item</button>
-                        </span>
-                    </form>
-                </li>
-            }
-        </ul>
+        @*<div class="result-list-header">*@
+            @*<span>One</span>*@
+            @*<span>Two</span>*@
+            @*<span>Three</span>*@
+            @*<span>Four</span>*@
+        @*</div>*@
+        @*<ul class="result-list">*@
+            @*items.map { item =>*@
+                @*<li>*@
+                    @*<form action="@routes.Items.delete(item.id)" method="post">*@
+                        @*<span>*@
+                            @*<a href="@routes.Items.show(item.id)">@item.title</a>*@
+                            @*<input type="hidden" name="id" id="id" value="@item.id">*@
+                            @*<button type="submit">Delete item</button>*@
+                        @*</span>*@
+                    @*</form>*@
+                @*</li>*@
+            @*}*@
+        @*</ul>*@
 
     </div>
 
