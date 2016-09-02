@@ -4,9 +4,8 @@ import javax.inject._
 import play.api.mvc.Controller
 import play.api.mvc.Action
 
-
 @Singleton
-class HomeController extends Controller {
+class Application extends Controller {
 
   def index = Action { implicit request =>
 

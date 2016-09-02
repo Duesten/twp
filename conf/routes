@@ -3,33 +3,33 @@
 # ~~~~
 
 # An example controller showing how to write asynchronous code
-GET     /message                    controllers.AsyncController.message
-
-GET     /                           controllers.HomeController.index
-
-GET     /users                      controllers.Users.list
-
-POST    /users/create               controllers.Users.create
-GET     /users/:id                  controllers.Users.show(id : Long)
-POST    /users/:id/edit             controllers.Users.edit(id : Long)
-POST    /users/:id/delete           controllers.Users.delete(id : Long)
-
-
-
-
-GET     /items                      controllers.Items.list
-
-POST    /items/create               controllers.Items.create
-POST    /items/search               controllers.Items.search
-GET     /items/:id                  controllers.Items.show(id : Long)
-POST    /items/:id/edit             controllers.Items.edit(id: Long)
-POST    /items/:id/delete           controllers.Items.delete(id : Long)
-POST    /items/:id/reserve          controllers.Items.reserve(id : Long)
-
-GET     /init                       controllers.Users.init()
-
-
-
+#GET     /message                    controllers.AsyncController.message
+#
+GET     /                           controllers.Application.index
+#
+#GET     /users                      controllers.Users.list
+#
+#POST    /users/create               controllers.Users.create
+#GET     /users/:id                  controllers.Users.show(id : Long)
+#POST    /users/:id/edit             controllers.Users.edit(id : Long)
+#POST    /users/:id/delete           controllers.Users.delete(id : Long)
+#
+#
+#
+#
+GET     /items                      controllers.Application.index
+#
+#POST    /items/create               controllers.Items.create
+#POST    /items/search               controllers.Items.search
+#GET     /items/:id                  controllers.Items.show(id : Long)
+#POST    /items/:id/edit             controllers.Items.edit(id: Long)
+#POST    /items/:id/delete           controllers.Items.delete(id : Long)
+#POST    /items/:id/reserve          controllers.Items.reserve(id : Long)
+#
+#GET     /init                       controllers.Users.init()
+#
+#
+#
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 

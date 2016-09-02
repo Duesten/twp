@@ -1,3 +1,6 @@
+resolvers += "Typesafe repository" at "https://repo.typesafe.com/typesafe/maven-releases/"
+resolvers += "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
+
 // The Play plugin
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.2")
 
@@ -18,3 +21,9 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-digest" % "1.1.0")
 addSbtPlugin("com.typesafe.sbt" % "sbt-mocha" % "1.1.0")
 
 addSbtPlugin("org.irundaia.sbt" % "sbt-sassify" % "1.4.2")
+
+libraryDependencies += "postgresql" % "postgresql" % "9.1-901.jdbc4"
+
+addSbtPlugin("org.scalikejdbc" %% "scalikejdbc-mapper-generator" % "2.4.1")
+
+addSbtPlugin("org.scalariform" % "sbt-scalariform" % "1.6.0")

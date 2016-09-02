@@ -1,21 +1,23 @@
-name := """play-scala"""
+name := "thepiratebay"
+version := "3.0"
 
-version := "1.0-SNAPSHOT"
+resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.11.7"
 
+
 libraryDependencies ++= Seq(
   cache,
   ws,
   "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test,
-  "com.typesafe.play" %% "play-slick" % "2.0.0",
-  "com.typesafe.play" %% "play-slick-evolutions" % "2.0.0",
-  "org.slf4j" % "slf4j-nop" % "1.6.4",
-  "org.postgresql" % "postgresql" % "9.4-1201-jdbc41"
+  "org.postgresql" % "postgresql" % "9.4-1201-jdbc41",
+  "com.github.tototoshi" %% "scala-csv" % "1.3.1",
+  "org.scalikejdbc" %% "scalikejdbc" % "2.4.+"
 )
 
-resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
 
 fork in run := false
+
+scalikejdbcSettings

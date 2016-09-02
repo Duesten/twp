@@ -3,7 +3,7 @@
     <div class="text-centered">
         <a href="">Search items</a>
         |
-        <a href="@routes.Items.list()">Browse items</a>
+        <a href="@routes.Application.index()">Browse items</a>
         |
         <a class="link-disabled"   href="">Recent items</a>
         |
@@ -15,7 +15,7 @@
 
     </div>
 
-    <form action="@routes.Items.search" method="post">
+    <form action="@routes.Application.index()" method="post">
         <input type="text" class="centered block search-box" name="q" placeholder="Enter a search term..."/>
 
         <div class="text-centered mt10">
