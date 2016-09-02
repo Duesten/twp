@@ -24,13 +24,6 @@
             }
         </ul>
 
-        @form(routes.Items.create()) {
-            @inputText(itemCreationForm("title"),'_label -> "Title",'_showConstraints -> false )
-            @inputText(itemCreationForm("description"),'_label -> "Description",'_showConstraints -> false )
-            <button type="submit" class="btn btn-info">Create item</button>
-            <button type="reset" class="btn btn-danger">Clear form</button>
-        }
-
     </div>
 
 }
