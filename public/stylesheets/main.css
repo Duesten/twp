@@ -48,6 +48,7 @@ a.link-disabled{
 }
 .result-list{
     width: 100%;
+    margin-top: 5%;
 }
 .result-list-header{
     background: #D2B9A6;
