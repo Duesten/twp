@@ -2,6 +2,12 @@
     width:450px;
 }
 
+a.link-disabled{
+    color: grey;
+    cursor: not-allowed;
+    text-decoration: none !important;
+}
+
 .centered {
     margin : 0 auto;
 }
