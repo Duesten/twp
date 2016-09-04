@@ -1,22 +1,24 @@
 package models
 
 import scalikejdbc._
+import org.joda.time.{DateTime}
 
 case class Item(
-    id: Long,
-    title: Option[String] = None,
-    description: Option[String] = None,
-    reserved: Option[Boolean] = None,
-    medium: Option[String] = None,
-    creators: Option[String] = None,
-    production: Option[String] = None,
-    year: Option[String] = None,
-    country: Option[String] = None,
-    lang: Option[String] = None,
-    website: Option[String] = None,
-    genre: Option[String] = None,
-    extra: Option[String] = None
-) {
+  id: Long,
+  createdTimestamp: DateTime,
+  deletedTimestamp: Option[DateTime] = None,
+  title: Option[String] = None,
+  description: Option[String] = None,
+  reserved: Option[Boolean] = None,
+  medium: Option[String] = None,
+  creators: Option[String] = None,
+  production: Option[String] = None,
+  year: Option[String] = None,
+  country: Option[String] = None,
+  lang: Option[String] = None,
+  website: Option[String] = None,
+  genre: Option[String] = None,
+  extra: Option[String] = None) {
 
   def save()(implicit session: DBSession = Item.autoSession): Item = Item.save(this)(session)
 
@@ -24,15 +26,20 @@ case class Item(
 
 }
 
+
 object Item extends SQLSyntaxSupport[Item] {
+
+  override val schemaName = Some("public")
 
   override val tableName = "item"
 
-  override val columns = Seq("id", "title", "description", "reserved", "medium", "creators", "production", "year", "country", "lang", "website", "genre", "extra")
+  override val columns = Seq("id", "created_timestamp", "deleted_timestamp", "title", "description", "reserved", "medium", "creators", "production", "year", "country", "lang", "website", "genre", "extra")
 
   def apply(i: SyntaxProvider[Item])(rs: WrappedResultSet): Item = apply(i.resultName)(rs)
   def apply(i: ResultName[Item])(rs: WrappedResultSet): Item = new Item(
     id = rs.get(i.id),
+    createdTimestamp = rs.get(i.createdTimestamp),
+    deletedTimestamp = rs.get(i.deletedTimestamp),
     title = rs.get(i.title),
     description = rs.get(i.description),
     reserved = rs.get(i.reserved),
@@ -84,6 +91,8 @@ object Item extends SQLSyntaxSupport[Item] {
   }
 
   def create(
+    createdTimestamp: DateTime,
+    deletedTimestamp: Option[DateTime] = None,
     title: Option[String] = None,
     description: Option[String] = None,
     reserved: Option[Boolean] = None,
@@ -95,10 +104,11 @@ object Item extends SQLSyntaxSupport[Item] {
     lang: Option[String] = None,
     website: Option[String] = None,
     genre: Option[String] = None,
-    extra: Option[String] = None
-  )(implicit session: DBSession = autoSession): Item = {
+    extra: Option[String] = None)(implicit session: DBSession = autoSession): Item = {
     val generatedKey = withSQL {
       insert.into(Item).namedValues(
+        column.createdTimestamp -> createdTimestamp,
+        column.deletedTimestamp -> deletedTimestamp,
         column.title -> title,
         column.description -> description,
         column.reserved -> reserved,
@@ -116,6 +126,8 @@ object Item extends SQLSyntaxSupport[Item] {
 
     Item(
       id = generatedKey,
+      createdTimestamp = createdTimestamp,
+      deletedTimestamp = deletedTimestamp,
       title = title,
       description = description,
       reserved = reserved,
@@ -127,13 +139,14 @@ object Item extends SQLSyntaxSupport[Item] {
       lang = lang,
       website = website,
       genre = genre,
-      extra = extra
-    )
+      extra = extra)
   }
 
   def batchInsert(entities: Seq[Item])(implicit session: DBSession = autoSession): Seq[Int] = {
     val params: Seq[Seq[(Symbol, Any)]] = entities.map(entity =>
       Seq(
+        'createdTimestamp -> entity.createdTimestamp,
+        'deletedTimestamp -> entity.deletedTimestamp,
         'title -> entity.title,
         'description -> entity.description,
         'reserved -> entity.reserved,
@@ -145,9 +158,10 @@ object Item extends SQLSyntaxSupport[Item] {
         'lang -> entity.lang,
         'website -> entity.website,
         'genre -> entity.genre,
-        'extra -> entity.extra
-      ))
-    SQL("""insert into item(
+        'extra -> entity.extra))
+        SQL("""insert into item(
+        created_timestamp,
+        deleted_timestamp,
         title,
         description,
         reserved,
@@ -161,6 +175,8 @@ object Item extends SQLSyntaxSupport[Item] {
         genre,
         extra
       ) values (
+        {createdTimestamp},
+        {deletedTimestamp},
         {title},
         {description},
         {reserved},
@@ -174,12 +190,14 @@ object Item extends SQLSyntaxSupport[Item] {
         {genre},
         {extra}
       )""").batchByName(params: _*).apply()
-  }
+    }
 
   def save(entity: Item)(implicit session: DBSession = autoSession): Item = {
     withSQL {
       update(Item).set(
         column.id -> entity.id,
+        column.createdTimestamp -> entity.createdTimestamp,
+        column.deletedTimestamp -> entity.deletedTimestamp,
         column.title -> entity.title,
         column.description -> entity.description,
         column.reserved -> entity.reserved,

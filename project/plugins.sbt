@@ -6,6 +6,8 @@ libraryDependencies += "org.postgresql" % "postgresql" % "9.4-1201-jdbc41"
 // The Play plugin
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.2")
 
+addSbtPlugin("org.scalikejdbc" %% "scalikejdbc-mapper-generator" % "2.4.2")
+
 addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.0.3")
 
 // web plugins
