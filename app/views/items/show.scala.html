@@ -12,14 +12,14 @@
                 <div>Title : @item.title</div>
                 <div>
                     Status : @{if(item.reserved) "Reserved" else "Available"}
-                    <form action="@routes.Items.reserve(item.id)" method="post">
-                        <span>
-                            <input type="hidden" name="id" id="id" value="@item.id">
-                            @if(!item.reserved) {
-                                <button type="submit">Reserve</button>
-                            }
-                        </span>
-                    </form>
+                    @*<form action="@routes.Items.reserve(item.id)" method="post">*@
+                        @*<span>*@
+                            @*<input type="hidden" name="id" id="id" value="@item.id">*@
+                            @*if(!item.reserved) {*@
+                                @*<button type="submit">Reserve</button>*@
+                            @*}*@
+                        @*</span>*@
+                    @*</form>*@
                 </div>
                 <div class="item-description">
                     Description : @item.description

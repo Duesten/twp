@@ -1,4 +1,4 @@
-@(items: Seq[Item], itemCreationForm: Form[ItemData])(implicit messages: Messages)
+@(items: Seq[Item])
 
 @import helper._
 
@@ -31,8 +31,10 @@
                 @items.map { item =>
                     <tr>
                         <td>N/A</td>
-                        <td><a href="@routes.Items.show(item.id)">@item.title</a></td>
-                        <td>N/A</td>
+                        <td>
+                            <a>@item.title + @item.description</a>
+                        </td>
+                        <td></td>
                         <td>N/A</td>
                     </tr>
                     @*<form action="@routes.Items.delete(item.id)" method="post">*@

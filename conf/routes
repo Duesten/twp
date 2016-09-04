@@ -17,7 +17,7 @@ GET     /                           controllers.Application.index
 #
 #
 #
-GET     /items                      controllers.Application.index
+GET     /items                      controllers.Items.list
 #
 #POST    /items/create               controllers.Items.create
 #POST    /items/search               controllers.Items.search
