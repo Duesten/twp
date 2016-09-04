@@ -45,16 +45,16 @@
         <table class="result-list">
             <thead class="result-list-header">
                 <tr>
-                    <th>
+                    <th class="tac">
                         Type
                     </th>
-                    <th>
+                    <th class="tac">
                         Title
                     </th>
-                    <th>
+                    <th class="tac">
                         Creators
                     </th>
-                    <th>
+                    <th class="tac">
                         Year
                     </th>
                 </tr>
@@ -63,11 +63,11 @@
 
                 @items.map { item =>
                     <tr>
-                        <td>@item.medium</td>
+                        <td><a href="@routes.Items.showCategory(item.medium.getOrElse(""))">@item.medium</a></td>
                         <td>
                             <a href="@routes.Items.show(item.id)">@item.title + @item.description</a>
                         </td>
-                        <td>@item.creators</td>
+                        <td><a href="@routes.Items."></a>@item.creators</td>
                         <td>@item.year</td>
                     </tr>
                     @*<form action="@routes.Items.delete(item.id)" method="post">*@
