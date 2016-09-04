@@ -55,6 +55,9 @@ a.link-disabled{
 .result-list-header{
     background: #D2B9A6;
 }
+.result-list-header th{
+    padding:3px;
+}
 .result-list-results{
 
 }
