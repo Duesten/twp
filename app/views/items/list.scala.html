@@ -30,12 +30,12 @@
 
                 @items.map { item =>
                     <tr>
-                        <td>N/A</td>
+                        <td>@item.medium</td>
                         <td>
-                            <a>@item.title + @item.description</a>
+                            <a href="@routes.Items.show(item.id)">@item.title + @item.description</a>
                         </td>
-                        <td></td>
-                        <td>N/A</td>
+                        <td>@item.creators</td>
+                        <td>@item.year</td>
                     </tr>
                     @*<form action="@routes.Items.delete(item.id)" method="post">*@
                         @*<span>*@

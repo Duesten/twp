@@ -14,4 +14,9 @@ class Items extends Controller {
 
     Ok(views.html.items.list(items))
   }
+
+  def show(id : Long) = Action { implicit req =>
+
+    Ok(views.html.items.show(Item.find(id).get))
+  }
 }
