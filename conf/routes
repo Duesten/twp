@@ -21,7 +21,7 @@ GET     /                           controllers.Application.index
 GET     /items                      controllers.Items.list
 #
 #POST    /items/create               controllers.Items.create
-#POST    /items/search               controllers.Items.search
+POST    /items/category/:category   controllers.Items.showCategory(category : String)
 GET     /items/:id                  controllers.Items.show(id : Long)
 #POST    /items/:id/edit             controllers.Items.edit(id: Long)
 #POST    /items/:id/delete           controllers.Items.delete(id : Long)
