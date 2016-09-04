@@ -113,6 +113,7 @@ a.link-disabled{
     text-decoration: none;
     border-bottom: 1px dotted #000;
     margin: 0 4px;
+    font-size:1.04em;
 }
 .index-navbar{
     margin-bottom: 10px;
