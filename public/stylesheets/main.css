@@ -49,7 +49,7 @@ a.link-disabled{
 .result-list{
     width: 100%;
     margin-top: 15%;
-    border: #D2B9A6 solid 2px;
+    border: #D2B9A6 solid 1px;
     margin-bottom: 10%;
 }
 .result-list-header{
@@ -87,8 +87,9 @@ a.link-disabled{
     /*border: solid 2px;*/
     border-color: #D2B9A6;
     background-color: white;
-    border-bottom: solid 2px #D2B9A6;
+    border-bottom: solid 1px #D2B9A6;
     padding: 10px;
+    font-size:12px;
 }
 
 .bordered-searchnavbar img{
@@ -111,4 +112,12 @@ a.link-disabled{
     position: relative;
     left: 150px;
     top: 50px;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    background-color: magenta;
+    color: white;
+    font-weight:bold;
+    width: 100%;
 }
