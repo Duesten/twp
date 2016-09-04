@@ -66,6 +66,12 @@ a.link-disabled{
 .result-list-results td{
     padding:5px;
 }
+.result-list-results.categories a{
+    color: #009;
+    text-decoration: none;
+    border-bottom: 1px dotted #000;
+    margin: 0 4px;
+}
 .tac{
     text-align: center;
 }
