@@ -4,6 +4,8 @@ import javax.inject._
 import models.Item
 import play.api.mvc.Controller
 import play.api.mvc.Action
+import scalikejdbc._
+import models._
 
 import scalikejdbc.SQLSyntax._
 
@@ -21,7 +23,7 @@ class Items extends Controller {
 
   def showCategory(category : String) = Action { implicit req =>
     val i = Item.syntax("i")
-    val items = Item.findAllBy(where.eq(i.medium,category))
+    val items = Item.findAllBy(sqls.eq(i.medium,category))
     Ok(views.html.items.list(items))
   }
 }

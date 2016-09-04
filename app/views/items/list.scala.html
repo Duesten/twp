@@ -8,8 +8,15 @@
         @*<h1>@items.size results</h1>*@
 
         @*<img src="@routes.Assets.versioned("images/tpb.jpg")" class="img-responsive centered" />*@
-        <table>
-            <thead>
+        <table class="result-list tac">
+            <thead class="result-list-header">
+                <tr>
+                    <td class="boldness-is-the-key-LUL" colspan="5">
+                        Browse by category
+                    </td>
+                </tr>
+            </thead>
+            <tbody class="result-list-results">
                 <tr>
                     <td>
                         <a href="@routes.Items.showCategory("DVD")">DVD</a>
@@ -27,7 +34,7 @@
                         <a href="@routes.Items.showCategory("LP")">LP</a>
                     </td>
                 </tr>
-            </thead>
+            </tbody>
         </table>
 
         <table class="result-list">
