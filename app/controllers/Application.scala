@@ -41,7 +41,7 @@ class Application extends Controller {
 
     println("Done importing")
 
-    Ok()
+    Ok("DONE BITCH")
   }
 
 }
