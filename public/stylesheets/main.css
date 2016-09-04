@@ -1,5 +1,6 @@
 .search-box{
-    width:450px;
+    width:535px;
+    padding: 1px 3px;
 }
 
 a.link-disabled{
@@ -113,10 +114,15 @@ a.link-disabled{
     margin: 0 4px;
 }
 
+.bordered-searchnavbar .navbar a.link-disabled{
+    color: lightgray;
+}
+
 .bordered-searchnavbar .searchbar{
     position: relative;
     left: 150px;
     top: 50px;
+    width:270px;
 }
 .bordered-searchnavbar button{
     position: relative;
