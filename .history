@@ -1,0 +1,6 @@
+play run
+clean
+compile
+i
+:q
+exit
