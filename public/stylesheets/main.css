@@ -29,7 +29,7 @@ a.link-disabled{
 }
 
 .item-frame{
-    margin-top:50px;
+    margin-top:15%;
 }
 
 .item-details{
@@ -48,7 +48,7 @@ a.link-disabled{
 }
 .result-list{
     width: 100%;
-    margin-top: 10%;
+    margin-top: 15%;
     border: #D2B9A6 solid 2px;
     margin-bottom: 10%;
 }
@@ -82,15 +82,33 @@ a.link-disabled{
     position: fixed;
     top:0;
     left:0;
-    height: 75px;
+    height: 110px;
     width: 100%;
     /*border: solid 2px;*/
     border-color: #D2B9A6;
-}
-.bordered-searchnavbar{
-    margin-top:10px;
+    background-color: white;
+    border-bottom: solid 2px #D2B9A6;
+    padding: 10px;
 }
 
-.bordered-searchnavbar button {
+.bordered-searchnavbar img{
+    position: absolute;
+    width: 135px;
+    top: 0;
+    left: 0;
+}
 
+.bordered-searchnavbar .navbar{
+    position: absolute;
+    left: 158px;
+}
+.bordered-searchnavbar .searchbar{
+    position: relative;
+    left: 150px;
+    top: 50px;
+}
+.bordered-searchnavbar button{
+    position: relative;
+    left: 150px;
+    top: 50px;
 }

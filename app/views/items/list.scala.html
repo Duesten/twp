@@ -4,8 +4,22 @@
 
 @main("Items") {
     <div class="container">
-
         <form action="@routes.Items.textSearch" method="post" class="bordered-searchnavbar">
+            <div class="navbar">
+
+                <a href="@routes.Items.list()">Browse all items</a>
+                |
+                <a href="@routes.Items.showCategories" class="HOT_NEW_WOW">Categories (HOT! NEW! WOW!)</a>
+                |
+                <a href="">Some other fancy feature</a>
+                |
+                <a class="link-disabled"   href="">More stuff?</a>
+                |
+                <a class="link-disabled" href="">Something else? Who knows!</a>
+                |
+                <a class="link-disabled" href="">Featured</a>
+            </div>
+            <img src="@routes.Assets.versioned("images/WORMPirateBay_logo_AmySuoWu.png")" class="bordered-searchnavbar-img"/>
             <input type="text" class="centered searchbar" name="q" placeholder="Enter a search term..."/>
             <button type="submit" name="searchType" value="normal">Search</button>
         </form>
