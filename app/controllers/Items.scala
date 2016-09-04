@@ -56,8 +56,11 @@ class Items extends Controller {
           like(i.year,likeString)
         ).or(
           like(i.genre,likeString)
-        ) or like(i.extra,likeString)
+        ).or(
+          like(i.extra,likeString)
+        ) or like(i.medium,likeString)
         )
+
         dbresult
       }
     }.getOrElse(List.empty)

@@ -52,6 +52,7 @@ a.link-disabled{
     background-color : #fff;
 }
 .result-list{
+    font-size:1.5em;
     width: 100%;
     border: #D2B9A6 solid 1px;
 }
@@ -94,7 +95,6 @@ a.link-disabled{
     background-color: white;
     border-bottom: solid 1px #D2B9A6;
     padding: 10px;
-    font-size:12px;
 }
 
 .bordered-searchnavbar img{
