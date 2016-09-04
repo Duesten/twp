@@ -1,21 +1,21 @@
 @main("The wormbay") {
     <img src="@routes.Assets.versioned("images/tpb.jpg")" class="img-responsive centered mt10"/>
     <div class="text-centered">
-        <a href="">Search items</a>
-        |
         <a href="@routes.Items.list()">Browse items</a>
         |
-        <a class="link-disabled"   href="">Recent items</a>
+        <a href="@routes.Items.showCategories" class="HOT_NEW_WOW">Categories (HOT! NEW! WOW!)</a>
         |
-        <a class="link-disabled" href="">Movies</a>
+        <a href="">Some other fancy feature</a>
         |
-        <a class="link-disabled" href="">Books</a>
+        <a class="link-disabled"   href="">More stuff?</a>
         |
-        <a class="link-disabled" href="">Top 100</a>
+        <a class="link-disabled" href="">Something else? Who knows!</a>
+        |
+        <a class="link-disabled" href="">Featured</a>
 
     </div>
 
-    <form action="@routes.Application.index()" method="post">
+    <form action="@routes.Items.textSearch" method="post">
         <input type="text" class="centered block search-box" name="q" placeholder="Enter a search term..."/>
 
         <div class="text-centered mt10">

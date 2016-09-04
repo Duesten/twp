@@ -66,5 +66,12 @@ a.link-disabled{
     text-align: center;
 }
 .boldness-is-the-key-LUL{
+    font-weight:bold;
+}
 
+.HOT_NEW_WOW{
+    COLOR : RED !IMPORTANT;
+    text-decoration: underline;
+    font-weight:bold;
+    font-size:120%;
 }
