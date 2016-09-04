@@ -49,9 +49,7 @@ a.link-disabled{
 }
 .result-list{
     width: 100%;
-    margin-top: 15%;
     border: #D2B9A6 solid 1px;
-    margin-bottom: 10%;
 }
 .result-list-header{
     background: #D2B9A6;
@@ -161,7 +159,6 @@ a.link-disabled{
     font-weight: bold;
     padding-left: 20px;
 }
-
 .fr{
     float: right;
 }
@@ -171,7 +168,15 @@ a.link-disabled{
 .pr-10{
     padding-right: 10px;
 }
-
 .index-logo{
     width:  25%;
+}
+.m0{
+    margin: 0;;
+}
+.mt15{
+    margin-top:15%;
+}
+.mb15{
+    margin-bottom:15%;
 }
