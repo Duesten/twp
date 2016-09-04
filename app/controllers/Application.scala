@@ -18,7 +18,7 @@ class Application extends Controller {
 
     println("Importing")
 
-    CSVReader.open("resources/csv/CSV_Import.csv").foreach( record =>
+    CSVReader.open("resources/csv/CSV_import.csv").foreach( record =>
 
       Item.create(
         createdTimestamp = DateTime.now(),
