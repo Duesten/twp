@@ -2,7 +2,7 @@
 
 @import helper._
 
-@main("Item " + item.title) {
+@main("thepiratebay") {
 
     <div class="container">
 
@@ -10,6 +10,18 @@
             <div class="item-title">@item.title</div>
             <div class="item-details">
                 <div>Title : @item.title</div>
+                <div>Artist/Author/Creator/Credits : @item.creators</div>
+                <div>Genre : @item.genre</div>
+                <div>Production : @item.production</div>
+                <div>Year : @item.title</div>
+                <div>Country : @item.country</div>
+                <div>Medium : @item.medium</div>
+                <div>Language(s) : @item.lang</div>
+                <div>Reservation info :</div>
+                <div>Reservation status: @item.reserved</div>
+                <div>More stuff : </div>
+                <div>Website: @item.website</div>
+                <div>Extra tags: @item.extra</div>
                 <div>
                     Status : @{if(item.reserved) "Reserved" else "Available"}
                     @*<form action="@routes.Items.reserve(item.id)" method="post">*@
