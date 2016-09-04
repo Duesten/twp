@@ -45,19 +45,18 @@ class Items extends Controller {
 
         val dbresult = Item.findAllBy(
           sqls.like(i.title,likeString).or(
-            like(i.description,likeString)
-          ).or(
-            like(i.year,likeString)
-          ).or(
-            like(i.creators,likeString)
-          ).or(
-            like(i.production,likeString)
-          ).or(
-            like(i.year,likeString)
-          ).or(
-            like(i.genre,likeString)
-          ) or
-            like(i.extra,likeString)
+          like(i.description,likeString)
+        ).or(
+          like(i.year,likeString)
+        ).or(
+          like(i.creators,likeString)
+        ).or(
+          like(i.production,likeString)
+        ).or(
+          like(i.year,likeString)
+        ).or(
+          like(i.genre,likeString)
+        ) or like(i.extra,likeString)
         )
         dbresult
       }
