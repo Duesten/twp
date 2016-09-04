@@ -114,7 +114,7 @@ a.link-disabled{
     top: 50px;
 }
 .footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background-color: magenta;
     color: white;
