@@ -11,20 +11,14 @@ import play.api.mvc.Action
 class Application extends Controller {
 
   def index = Action { implicit request =>
+    Ok(views.html.index())
+  }
 
-    // MEDIUM     1
-    // ARTIST     2
-    // TITLE      3
-    // PRODUCTION 4
-    // YEAR       5
-    // COUNTRY    6
-    // LANGUAGE   7
-    // WEBSITE    8
-    // MORE:      9
-    // DESC       10
-    // GENRE      11
+  def importCSV() = Action { implicit req =>
 
-    CSVReader.open("resources/csv/HAJO_AND_MARIETTE.csv").foreach( f = record =>
+    println("Importing")
+
+    CSVReader.open("resources/csv/CSV_Import.csv").foreach( record =>
 
       Item.create(
         createdTimestamp = DateTime.now(),
@@ -44,7 +38,10 @@ class Application extends Controller {
       )
 
     )
-    Ok(views.html.index())
+
+    println("Done importing")
+
+    Ok()
   }
 
 }
