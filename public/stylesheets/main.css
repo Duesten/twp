@@ -87,13 +87,10 @@ a.link-disabled{
     /*border: solid 2px;*/
     border-color: #D2B9A6;
 }
-.bordered-searchnavbar input,.bordered-searchnavbar button {
-    top: 10%;
-    position: absolute;
-    left: 13%;
+.bordered-searchnavbar{
+    margin-top:10px;
 }
 
 .bordered-searchnavbar button {
-    position: absolute;
-    left: 25%;
+
 }
