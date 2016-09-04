@@ -48,7 +48,7 @@ a.link-disabled{
 }
 .result-list{
     width: 100%;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 .result-list-header{
     background: #D2B9A6;
@@ -57,7 +57,7 @@ a.link-disabled{
 
 }
 .result-list-results tr{
-
+    background-color: white;
 }
 .result-list-results td{
     padding:5px;
@@ -74,4 +74,24 @@ a.link-disabled{
     text-decoration: underline;
     font-weight:bold;
     font-size:120%;
+}
+
+.bordered-searchnavbar{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 75px;
+    width: 100%;
+    /*border: solid 2px;*/
+    border-color: #D2B9A6;
+}
+.bordered-searchnavbar input,.bordered-searchnavbar button {
+    top: 10%;
+    position: absolute;
+    left: 13%;
+}
+
+.bordered-searchnavbar button {
+    position: absolute;
+    left: 25%;
 }

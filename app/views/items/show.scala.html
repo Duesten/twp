@@ -6,6 +6,11 @@
 
     <div class="container">
 
+        <form action="@routes.Items.textSearch" method="post" class="bordered-searchnavbar">
+            <input type="text" class="centered searchbar" name="q" placeholder="Enter a search term..."/>
+            <button type="submit" name="searchType" value="normal">Search</button>
+        </form>
+
         <div class="item-frame">
             <div class="item-title">@item.title</div>
             <div class="item-details">
@@ -17,13 +22,16 @@
                 <div>Country : @item.country</div>
                 <div>Medium : @item.medium</div>
                 <div>Language(s) : @item.lang</div>
+                <div>________________________</div>
                 <div>Reservation info :</div>
-                <div>Reservation status: @item.reserved</div>
+                <div>Status : @{if(item.reserved) "Reserved" else "Available"}</div>
+                <div>________________________</div>
                 <div>More stuff : </div>
                 <div>Website: @item.website</div>
                 <div>Extra tags: @item.extra</div>
+                <div>________________________</div>
                 <div>
-                    Status : @{if(item.reserved) "Reserved" else "Available"}
+
                     @*<form action="@routes.Items.reserve(item.id)" method="post">*@
                         @*<span>*@
                             @*<input type="hidden" name="id" id="id" value="@item.id">*@
