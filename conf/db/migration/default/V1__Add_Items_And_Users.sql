@@ -1,4 +1,5 @@
-drop table if exists users;
+drop table if exists users CASCADE;
+drop SEQUENCE if EXISTS user_id_seq CASCADE;
 create sequence user_id_seq start with 1;
 CREATE TABLE users
 (
@@ -7,7 +8,8 @@ CREATE TABLE users
     password character varying
 );
 
-drop table if exists item;
+drop table if exists item CASCADE;
+drop SEQUENCE if EXISTS user_id_seq CASCADE;
 create sequence item_id_seq start with 1;
 create table item (
     id bigint not null default nextval('item_id_seq') PRIMARY KEY ,
