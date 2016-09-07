@@ -10,6 +10,24 @@
 
     });
 </script>
+    <form action="@routes.Items.textSearch" method="post" class="bordered-searchnavbar">
+        <div class="navbar">
+            <a href="@routes.Items.list()">Browse items</a>
+            |
+            <a href="@routes.Items.showCategories">Browse categories</a>
+            |
+            <a class="link-disabled"   href="">Top 100</a>
+            |
+            <a class="link-disabled" href="">Recent</a>
+            |
+            <a class="link-disabled" href="">Featured</a>
+        </div>
+        <a href="/">
+            <img src="@routes.Assets.versioned("images/WORMPirateBay_logo_AmySuoWu.png")" class="bordered-searchnavbar-img"/>
+        </a>
+        <input type="text" class="centered searchbar" name="q" placeholder="Pirate search..."/>
+        <button type="submit" name="searchType" value="normal">Pirate Search</button>
+    </form>
 
     <div class="sidemenu">
         <div class="link-style">
@@ -42,7 +60,7 @@
 
     </div>
     <div class="container">
-        <div class="page-title-bar" style="top: 0;">About The WORM Piratebay</div>
+        <div class="page-title-bar">About The WORM Piratebay</div>
             <div class="page-content">
                 <div id="default" class="content">
 
