@@ -5,41 +5,39 @@
 
         $('.menu-entry').click(function(event){
            $('#default,#press-release,#invitation,#press-quotes').hide();
-            console.log(event.target);
-           $('#'+$(event.target).data("menu")).show();
+           $('#'+$(event.currentTarget).data("menu")).show();
         });
 
     });
 </script>
 
     <div class="sidemenu">
-        <div class="menu-entry">
+        <div class="link-style">
             <a href="/">
                 Back to home
             </a>
         </div>
         <br>
         <br>
-        <div class="menu-entry"></div>
-        <div class="menu-entry" data-menu="default">
-            <a href="">
+        <div class="menu-entry link-style" data-menu="default">
+            <span>
                 Concept
-            </a>
+            </span>
         </div>
-        <div class="menu-entry" data-menu="press-release">
-            <a href="">
+        <div class="menu-entry link-style" data-menu="press-release">
+            <span>
                 Press Release
-            </a>
+            </span>
         </div>
-        <div class="menu-entry" data-menu="press-quotes">
-            <a href="">
+        <div class="menu-entry link-style" data-menu="press-quotes">
+            <span>
                 Press quotes
-            </a>
+            </span>
         </div>
-        <div class="menu-entry" data-menu="invitation">
-            <a href="">
+        <div class="menu-entry link-style" data-menu="invitation">
+            <span>
                 Invitation
-            </a>
+            </span>
         </div>
 
     </div>
@@ -47,6 +45,13 @@
         <div class="page-title-bar" style="top: 0;">About The WORM Piratebay</div>
             <div class="page-content">
                 <div id="default" class="content">
+
+                    <img class="centered block" src="/assets/images/huilie.png" style="width: 500px;">
+                    <br>
+                    <div class="tac">
+                        <small>Huilie designed by Larissa Monteiro.</small>
+                    </div>
+
                     <h2 class="content-header">
                         THE WORM PIRATE BAY CONCEPT
                     </h2>

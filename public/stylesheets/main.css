@@ -77,6 +77,13 @@ a.link-disabled{
     border-bottom: 1px dotted #000;
     margin: 0 4px;
 }
+.link-style span, a{
+    color: #009;
+    text-decoration: none;
+    border-bottom: 1px dotted #000;
+    margin: 0 4px;
+    cursor: pointer;
+}
 .tac{
     text-align: center;
 }
@@ -90,7 +97,6 @@ a.link-disabled{
     left:0;
     height: 110px;
     width: 100%;
-    /*border: solid 2px;*/
     border-color: #D2B9A6;
     background-color: white;
     border-bottom: solid 1px #D2B9A6;
@@ -212,7 +218,7 @@ div.menu-entry{
 
 .page-content{
     position: relative;
-    left: 10%;
+    left: 15%;
     width: 80%;
 }
 
