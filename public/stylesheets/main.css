@@ -205,12 +205,13 @@ div.sidemenu{
     top:125px;
     left:0;
     height:100%;
-    width:10%;
+    width:15%;
     font-size: 12px;
     border: 1px solid #D2B9A6;
 }
 div.menu-entry{
     padding: 3px;
+    padding-left: 10px;
     border-bottom: 1px solid #F6F1EE;
     font-size:12px;
 }
@@ -226,4 +227,7 @@ div.menu-entry{
 
 #invitation img{
     width:700px;
+}
+.pl-10{
+    padding-left: 10px;
 }
