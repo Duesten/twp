@@ -14,6 +14,10 @@ class Application extends Controller {
     Ok(views.html.index())
   }
 
+  def about = Action { implicit request =>
+    Ok(views.html.about())
+  }
+
   def importCSV() = Action { implicit req =>
 
     println("Importing")
