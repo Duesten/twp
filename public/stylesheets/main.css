@@ -191,3 +191,31 @@ a.how-to-download-index{
     font-weight:bold;
     font-size:1.3em;
 }
+.page-content{
+    margin-top: 50px;
+}
+
+div.sidemenu{
+    position: fixed;
+    top:15px;
+    left:0;
+    height:100%;
+    width:10%;
+    font-size: 12px;
+    border: 1px solid #D2B9A6;
+}
+div.menu-entry{
+    padding: 3px;
+    border-bottom: 1px solid #F6F1EE;
+    font-size:12px;
+}
+
+.page-content{
+    position: relative;
+    left: 10%;
+    width: 80%;
+}
+
+#invitation img{
+    width:700px;
+}

@@ -1,109 +1,148 @@
 @main("The WORM Pirate Bay - About The WORM Piratebay") {
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script >
+    $(function(){
 
+        $('.menu-entry').click(function(event){
+           $('#default,#press-release,#invitation,#press-quotes').hide();
+            console.log(event.target);
+           $('#'+$(event.target).data("menu")).show();
+        });
+
+    });
+</script>
+
+    <div class="sidemenu">
+        <div class="menu-entry">
+            <a href="/">
+                Back to home
+            </a>
+        </div>
+        <br>
+        <br>
+        <div class="menu-entry"></div>
+        <div class="menu-entry" data-menu="default">
+            <a href="">
+                Concept
+            </a>
+        </div>
+        <div class="menu-entry" data-menu="press-release">
+            <a href="">
+                Press Release
+            </a>
+        </div>
+        <div class="menu-entry" data-menu="press-quotes">
+            <a href="">
+                Press quotes
+            </a>
+        </div>
+        <div class="menu-entry" data-menu="invitation">
+            <a href="">
+                Invitation
+            </a>
+        </div>
+
+    </div>
     <div class="container">
-        <div class="page-title-bar">About The WORM Piratebay</div>
-
-            <div class="page-content-visibible">
-                <div class="content-default">
+        <div class="page-title-bar" style="top: 0;">About The WORM Piratebay</div>
+            <div class="page-content">
+                <div id="default" class="content">
                     <h2 class="content-header">
                         THE WORM PIRATE BAY CONCEPT
                     </h2>
-                        <h3>
-                            WORM Institute for Avant-garde Recreation introduces the WORM Pirate Bay Media
-                            Archive: a no fee lending archive with an online database, and a unique preview space in
-                            WORM's building.
-                        </h3>
+                    <h3>
+                        WORM Institute for Avant-garde Recreation introduces the WORM Pirate Bay Media
+                        Archive: a no fee lending archive with an online database, and a unique preview space in
+                        WORM's building.
+                    </h3>
 
-                        <p>
-                            WORM's Pirate Bay archive has two key features. Firstly, the WORM Pirate Bay has both
-                            an online and offline presence. Guests can access the database online via
-                            thepiratebay.worm.org, a web application which is specifically designed to make WORM's
-                            archive user friendly.
-                        </p>
+                    <p>
+                        WORM's Pirate Bay archive has two key features. Firstly, the WORM Pirate Bay has both
+                        an online and offline presence. Guests can access the database online via
+                        thepiratebay.worm.org, a web application which is specifically designed to make WORM's
+                        archive user friendly.
+                    </p>
 
-                        <p>
-                            It is possible to browse by media type (VHS, DVD .. etc), genre,
-                            release year, etc or search the entire database by keyword. Creating a profile on
-                            thepiratebay website allows users to reserve items, save them to their profile, rate them or
-                            leave comments. A user who reserves an item is notified when it's ready to be picked up at
-                            WORM, and reminded when it's time to bring it back.
-                        </p>
+                    <p>
+                        It is possible to browse by media type (VHS, DVD .. etc), genre,
+                        release year, etc or search the entire database by keyword. Creating a profile on
+                        thepiratebay website allows users to reserve items, save them to their profile, rate them or
+                        leave comments. A user who reserves an item is notified when it's ready to be picked up at
+                        WORM, and reminded when it's time to bring it back.
+                    </p>
 
-                        <p>
-                            Visitors to WORM are able to browse and preview the media, get staff recommendations,
-                            and enjoy the selection of games and gadgets. Furthermore they can also take the chance
-                            to preview the WORM Pirate Bay archive in “DISPLAY”, a multi-functional art-design-nonobject
-                            by Amy Suo Wu. “DISPLAY” facilitates reading, watching, listening and sleeping in
-                            a cocoon, all while on display. "DISPLAY" is all about display, it doesn’t discriminate
-                            between inanimate objects and body as objects.
-                        </p>
+                    <p>
+                        Visitors to WORM are able to browse and preview the media, get staff recommendations,
+                        and enjoy the selection of games and gadgets. Furthermore they can also take the chance
+                        to preview the WORM Pirate Bay archive in “DISPLAY”, a multi-functional art-design-nonobject
+                        by Amy Suo Wu. “DISPLAY” facilitates reading, watching, listening and sleeping in
+                        a cocoon, all while on display. "DISPLAY" is all about display, it doesn’t discriminate
+                        between inanimate objects and body as objects.
+                    </p>
 
-                        <p>
-                            This offline presence is both an answer and a credo. It is WORM's response to the
-                            growing need for tangibility, something that the digital revolution has paradoxically brought
-                            about. Moreover, it comes from acknowledging that format is organic to the aesthetics of
-                            certain artworks; something that calls for the preservation and distribution of the original.
-                            As film activist Pip Chodorov said, “Better watch avant-garde films on VHS than on DVD
-                            because digital compression technology has been optimized for mainstream film and kills
-                            off the aesthetics of the analog film originals!”.
-                        </p>
+                    <p>
+                        This offline presence is both an answer and a credo. It is WORM's response to the
+                        growing need for tangibility, something that the digital revolution has paradoxically brought
+                        about. Moreover, it comes from acknowledging that format is organic to the aesthetics of
+                        certain artworks; something that calls for the preservation and distribution of the original.
+                        As film activist Pip Chodorov said, “Better watch avant-garde films on VHS than on DVD
+                        because digital compression technology has been optimized for mainstream film and kills
+                        off the aesthetics of the analog film originals!”.
+                    </p>
 
-                        <p>
-                            Secondly, by virtue of its comprehensiveness, the WORM Pirate Bay archive is one of the
-                            most important and valuable collections in the Netherlands.
-                        </p>
+                    <p>
+                        Secondly, by virtue of its comprehensiveness, the WORM Pirate Bay archive is one of the
+                        most important and valuable collections in the Netherlands.
+                    </p>
 
-                        <h4>
-                            The archive comprises of four modules:
-                        </h4>
+                    <h4>
+                        The archive comprises of four modules:
+                    </h4>
 
-                        <ol>
-                            <li>
-                                In 2013 WORM inherited an extensive VHS collection from Re:voir in Paris featuring the
-                                very best of international avant-garde film from 1920 till today. It includes films from the
-                                Dadaist, Surrealist and Letterist movements, films from the American avant-garde, diary
-                                films, found footage films, structural films, films evoking body art or performance art,
-                                arthouse features, animated works, hand-painted films etc. This collection gives an idea of
-                                the extent of practices and approaches used by experimental filmmakers in the principal
-                                centres of film production, namely North America, Austria, France, and Germany.
-                                Moreover, a large part of this collection consists of unique, unpublished tapes that were
-                                personally given by the filmmakers to Chodorov.
-                            </li>
-                            <li>
-                                The WORM Pirate Bay archive also houses the CultVideotheek Next Page collection of
-                                underground, trash, horror and porn films on DVD and VHS. Next to these cult films there
-                                is a considerable and contemporary arthouse collection, classics, world cinema,
-                                documentaries, animation and music films
-                            </li>
-                            <li>
-                                WORM's own productions form another part of the archive. The majority of the items
-                                were produced in the WORM SoundStudio and cover projects like Radio WORM (a
-                                monthly radio magazine that run from 2000-2012), Horspil (a series of radio plays
-                                produced from 2009 to the present day), and the Soundpiece Series which were released
-                                on LP. There are also many printed publications, such as artist Dennis de Bel's "A Very
-                                Hard Cover Book" and publications by The Parallel University of WORM such as Omar
-                                Munoz Cremers' "De Toekomst Hervonden"
-                            </li>
-                            <li>
-                                The WORM Pirate Bay archive involves a collection of Books, Magazines, Recordings
-                                (on CD, LP, Cassette), Film (DVD) and sound gadgets curated by WORM Director Hajo
-                                Doorn and Mariëtte Groot from the Underbelly shop. Thematically this collection is based
-                                round the early avant-garde, experimental and underground music, sound art, film, media
-                                art, outsider art, DIY, activism and philosophy. The collection has both a national and
-                                international scope, with Dutch and English editions, and a preoccupation with the local
-                                and international art scenes.
-                            </li>
-                        </ol>
+                    <ol>
+                        <li>
+                            In 2013 WORM inherited an extensive VHS collection from Re:voir in Paris featuring the
+                            very best of international avant-garde film from 1920 till today. It includes films from the
+                            Dadaist, Surrealist and Letterist movements, films from the American avant-garde, diary
+                            films, found footage films, structural films, films evoking body art or performance art,
+                            arthouse features, animated works, hand-painted films etc. This collection gives an idea of
+                            the extent of practices and approaches used by experimental filmmakers in the principal
+                            centres of film production, namely North America, Austria, France, and Germany.
+                            Moreover, a large part of this collection consists of unique, unpublished tapes that were
+                            personally given by the filmmakers to Chodorov.
+                        </li>
+                        <li>
+                            The WORM Pirate Bay archive also houses the CultVideotheek Next Page collection of
+                            underground, trash, horror and porn films on DVD and VHS. Next to these cult films there
+                            is a considerable and contemporary arthouse collection, classics, world cinema,
+                            documentaries, animation and music films
+                        </li>
+                        <li>
+                            WORM's own productions form another part of the archive. The majority of the items
+                            were produced in the WORM SoundStudio and cover projects like Radio WORM (a
+                            monthly radio magazine that run from 2000-2012), Horspil (a series of radio plays
+                            produced from 2009 to the present day), and the Soundpiece Series which were released
+                            on LP. There are also many printed publications, such as artist Dennis de Bel's "A Very
+                            Hard Cover Book" and publications by The Parallel University of WORM such as Omar
+                            Munoz Cremers' "De Toekomst Hervonden"
+                        </li>
+                        <li>
+                            The WORM Pirate Bay archive involves a collection of Books, Magazines, Recordings
+                            (on CD, LP, Cassette), Film (DVD) and sound gadgets curated by WORM Director Hajo
+                            Doorn and Mariëtte Groot from the Underbelly shop. Thematically this collection is based
+                            round the early avant-garde, experimental and underground music, sound art, film, media
+                            art, outsider art, DIY, activism and philosophy. The collection has both a national and
+                            international scope, with Dutch and English editions, and a preoccupation with the local
+                            and international art scenes.
+                        </li>
+                    </ol>
             </div>
-        </div>
 
-        <div class="page-content-hidden">
-            
-            <div id="invitation" class="content">
-                <img src="/public/images/invitation.png"/>
+            <div id="invitation" class="content" style="display: none">
+                <img src="/assets/images/invitation.png"/>
             </div>
             
-            <div id="content-opening-event" class="content">
+            <div id="press-release" class="content" style="display: none ;">
                 <h2 class="content-header">
                     PRESS RELEASE- WORM PIRATE BAY OPENING
                 </h2>
@@ -126,7 +165,7 @@
                 </p>
             </div>
 
-            <div id="content-press-quotes" class="content">
+            <div id="press-quotes" class="content" style="display: none ;">
                 <h2 class="content-header">
                     PRESS QUOTES- THE WORM PIRATE BAY
                 </h2>
