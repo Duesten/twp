@@ -41,7 +41,7 @@ class Items extends Controller {
     val result = itemForm.bindFromRequest().apply("q").value.map {
       queryString => {
         Item.findAll().filter { item =>
-          (item.description + item.title + item.year + item.creators + item.production + item.year + item.genre + item.extra + item.medium).toLowerCase() contains queryString.toLowerCase()
+          (item.description + item.title + item.year + item.creators + item.production + item.year + item.genre + item.extra + item.medium).toLowerCase() contains queryString.getOrElse("asdasd").toLowerCase()
         }
       }
     }
