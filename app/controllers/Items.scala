@@ -38,32 +38,13 @@ class Items extends Controller {
     val itemForm = Form("q" -> text)
 
 
-    val result = itemForm.bindFromRequest().apply("q").value.map{
-      queryString =>  {
-        val i = Item.syntax("i")
-        val likeString = "%"+queryString+"%"
-
-        val dbresult = Item.findAllBy(
-          sqls.like(i.title,likeString).or(
-          like(i.description,likeString)
-        ).or(
-          like(i.year,likeString)
-        ).or(
-          like(i.creators,likeString)
-        ).or(
-          like(i.production,likeString)
-        ).or(
-          like(i.year,likeString)
-        ).or(
-          like(i.genre,likeString)
-        ).or(
-          like(i.extra,likeString)
-        ) or like(i.medium,likeString)
-        )
-
-        dbresult
+    val result = itemForm.bindFromRequest().apply("q").value.map {
+      queryString => {
+        Item.findAll().filter { item =>
+          (item.description + item.title + item.year + item.creators + item.production + item.year + item.genre + item.extra + item.medium).toLowerCase() contains queryString.toLowerCase()
+        }
       }
-    }.getOrElse(List.empty)
+    }
 
     Ok(views.html.items.list(result))
   }
