@@ -4,7 +4,7 @@
     $(function(){
 
         $('.menu-entry').click(function(event){
-           $('#default,#press-release,#invitation,#press-quotes').hide();
+           $('#default,#press-release,#invitation,#press-quotes,#howto').hide();
            $('#'+$(event.currentTarget).data("menu")).show();
         });
 
@@ -30,6 +30,11 @@
     </form>
 
     <div class="sidemenu">
+        <div class="menu-entry link-style" data-menu="howto">
+            <span>
+                How do I rent?
+            </span>
+        </div>
         <div class="menu-entry link-style" data-menu="default">
             <span>
                 Concept
@@ -61,7 +66,17 @@
     <div class="container">
         <div class="page-title-bar pl-10">About The WORM Piratebay</div>
             <div class="page-content">
-                <div id="default" class="content">
+
+                <div id="howto">
+                    <h2>How do I rent?</h2>
+                    <p>
+                        1) Browse for any item you're interested using the navigation bar on top, or using the search function.
+                        2) Yell ARRRRR!
+                        3) Come to our desk and ask us to take out the item for you!
+                    </p>
+                </div>
+
+                <div id="default" class="content" style="display: none;">
 
                     <img class="centered block" src="/assets/images/huilie.png" style="width: 500px;">
                     <br>
