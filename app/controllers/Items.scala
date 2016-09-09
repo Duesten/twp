@@ -36,7 +36,7 @@ class Items extends Controller {
   def textSearch = Action { implicit req =>
 
     val itemForm = Form("q" -> text)
-    val result = itemForm.bindFromRequest().apply("q").value.getOrElse("fuck off")
+    val result = itemForm.bindFromRequest().apply("q").value.getOrElse("FUCK").flatten
 
     val items = Item.findAll().filter { item =>
       (item.description + item.title + item.year + item.creators + item.production + item.year + item.genre + item.extra + item.medium).toLowerCase() contains result.toLowerCase()
