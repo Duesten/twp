@@ -36,17 +36,13 @@ class Items extends Controller {
   def textSearch = Action { implicit req =>
 
     val itemForm = Form("q" -> text)
+    val result = itemForm.bindFromRequest().apply("q").value.getOrElse("fuck off")
 
-
-    val result = itemForm.bindFromRequest().apply("q").value.map {
-      queryString => {
-        Item.findAll().filter { item =>
-          (item.description + item.title + item.year + item.creators + item.production + item.year + item.genre + item.extra + item.medium).toLowerCase() contains queryString.getOrElse("asdasd").toLowerCase()
-        }
-      }
+    val items = Item.findAll().filter { item =>
+      (item.description + item.title + item.year + item.creators + item.production + item.year + item.genre + item.extra + item.medium).toLowerCase() contains queryString.getOrElse("asdasd").toLowerCase()
     }
 
-    Ok(views.html.items.list(result))
+    Ok(views.html.items.list(items))
   }
 
 }
