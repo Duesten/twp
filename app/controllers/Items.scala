@@ -43,6 +43,7 @@ class Items extends Controller {
 
     val items = Item.findAll().filter { item =>
       (item.description + item.title + item.year + item.creators + item.production + item.year + item.genre + item.extra + item.medium).toLowerCase() contains result.toLowerCase()
+    }
 
 
     Ok(views.html.items.list(items))
