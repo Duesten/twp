@@ -35,6 +35,7 @@ class Items extends Controller {
 
   def textSearch = Action { implicit req =>
 
+<<<<<<< Updated upstream
     val singleForm = Form(
       single(
         "q" -> text
@@ -49,6 +50,36 @@ class Items extends Controller {
 
 
     Ok(views.html.items.list(items))
+=======
+    val searchedTextForm = Form(single( "q" -> text))
+    val searchedText = searchedTextForm.bindFromRequest()
+    val i = Item.syntax("i")
+
+    val result = searchedText.apply("q").value.map{
+      queryString =>  {
+        val ilikeString = "%"+queryString+"%"
+
+        val dbresult = Item.findAllBy(
+            sqls"i.description ilike ${ilikeString}"
+              .or(sqls"i.title ilike ${ilikeString}")
+              .or(sqls"i.medium ilike ${ilikeString}")
+              .or(sqls"i.creators ilike ${ilikeString}")
+              .or(sqls"i.production ilike ${ilikeString}")
+              .or(sqls"i.year ilike ${ilikeString}")
+              .or(sqls"i.country ilike ${ilikeString}")
+              .or(sqls"i.website ilike ${ilikeString}")
+              .or(sqls"i.genre ilike ${ilikeString}")
+              .or(sqls"i.extra ilike ${ilikeString}")
+              .or(sqls"i.title ilike ${ilikeString}")
+              .or(sqls"i.title ilike ${ilikeString}")
+              .or(sqls"i.title ilike ${ilikeString}")
+        )
+        dbresult
+      }
+    }.getOrElse(List.empty)
+
+    Ok(views.html.items.list(result))
+>>>>>>> Stashed changes
   }
 
 }
