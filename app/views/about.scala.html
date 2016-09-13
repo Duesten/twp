@@ -4,7 +4,7 @@
     $(function(){
 
         $('.menu-entry').click(function(event){
-           $('#default,#press-release,#invitation,#press-quotes,#howto').hide();
+           $('#default,#press-release,#press-quotes,#howto').hide();
            $('#'+$(event.currentTarget).data("menu")).show();
         });
 
@@ -48,11 +48,6 @@
         <div class="menu-entry link-style" data-menu="press-quotes">
             <span>
                 Press quotes
-            </span>
-        </div>
-        <div class="menu-entry link-style" data-menu="invitation">
-            <span>
-                Invitation
             </span>
         </div>
         <br>
@@ -177,9 +172,6 @@
                     </ol>
             </div>
 
-            <div id="invitation" class="content" style="display: none">
-                <img src="/assets/images/invitation.png"/>
-            </div>
             
             <div id="press-release" class="content" style="display: none ;">
                 <h2 class="content-header">
