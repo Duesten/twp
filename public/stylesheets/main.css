@@ -41,7 +41,7 @@ a.link-disabled{
     padding: 10px;
     background-color: #F6F1EE;
 }
-.item-detail{
+.item-detail span{
     font-weight: bold;
     padding: 0 5px 0 0;
     color: #7B563A;
@@ -52,10 +52,12 @@ a.link-disabled{
     background-color: #D2B9A6;
     height: 1%;
     padding: 6px 0 8px 10px;
+    font-weight: bold;
 }
 
 .item-description{
     background-color : #fff;
+    margin-top:18rem;
 }
 .result-list{
     width: 100%;
@@ -229,4 +231,15 @@ div.menu-entry{
 }
 .pl-10{
     padding-left: 10px;
+}
+
+.col-1-of-2{
+    display: block;
+    width:50%;
+    float: left;
+}
+.col-2-of-2 {
+    display: block;
+    width: 50%;
+    float: right;
 }

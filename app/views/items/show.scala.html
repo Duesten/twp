@@ -16,6 +16,8 @@
                 <a class="link-disabled" href="">Recent</a>
                 |
                 <a class="link-disabled" href="">Featured</a>
+                |
+                <a href="/about">About thepiratebay</a>
             </div>
             <a href="/">
                 <img src="@routes.Assets.versioned("images/WORMPirateBay_logo_AmySuoWu.png")" class="bordered-searchnavbar-img"/>
@@ -27,7 +29,7 @@
         <div class="item-frame">
             <div class="item-title">@item.title</div>
             <div class="item-details">
-                <div class="col-1">
+                <div class="col-1-of-2">
                     <div class="item-detail"><span>Title : </span>@item.title</div>
                     <div class="item-detail"><span>Artist/Author/Creator/Credits : </span>@item.creators</div>
                     <div class="item-detail"><span>Genre : </span>@item.genre</div>
@@ -37,33 +39,17 @@
                     <div class="item-detail"><span>Medium : </span>@item.medium</div>
                     <div class="item-detail"><span>Language(s) : </span>@item.lang</div>
                 </div>
-
-                <div>________________________</div>
-                <div>Reservation info :</div>
-                <div>Status : @{if(item.reserved) "Reserved" else "Available"}</div>
-                <div>________________________</div>
-                <div>More stuff : </div>
-                <div>Website: @item.website</div>
-                <div>Extra tags: @item.extra</div>
-                <div>________________________</div>
-                <div>
-
-                    @*<form action="@routes.Items.reserve(item.id)" method="post">*@
-                        @*<span>*@
-                            @*<input type="hidden" name="id" id="id" value="@item.id">*@
-                            @*if(!item.reserved) {*@
-                                @*<button type="submit">Reserve</button>*@
-                            @*}*@
-                        @*</span>*@
-                    @*</form>*@
+                <div class="col-2-of-2">
+                    <div class="item-detail"><span>Reservation status : </span>@{if(item.reserved) "Reserved" else "Available"}</div>
+                    <div class="item-detail"><span>Extra tags :</span>@item.extra</div>
                 </div>
+                <br>
+                <div class="item-detail"><span>Website : </span> <a href="@item.website">@item.website</a></div>
                 <div class="item-description">
-                    Description : @item.description
+                    @item.description
                 </div>
             </div>
-
         </div>
-
     </div>
 
 
