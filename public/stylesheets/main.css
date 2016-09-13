@@ -1,6 +1,6 @@
 *{
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 0.88em;
+    font-size: 1em;
 }
 .search-box{
     width:535px;
@@ -41,7 +41,13 @@ a.link-disabled{
     padding: 10px;
     background-color: #F6F1EE;
 }
-
+.item-detail{
+    font-weight: bold;
+    padding: 0 5px 0 0;
+    color: #7B563A;
+    border-bottom: 1px dashed #E8DCD2;
+    clear: both;
+}
 .item-title{
     background-color: #D2B9A6;
     height: 1%;
@@ -52,7 +58,6 @@ a.link-disabled{
     background-color : #fff;
 }
 .result-list{
-    font-size:1.5em;
     width: 100%;
     border: #D2B9A6 solid 1px;
 }
@@ -83,7 +88,6 @@ a.link-disabled{
     border-bottom: 1px dotted #000;
     margin: 0 4px;
     cursor: pointer;
-    font-size:12px;
 }
 .tac{
     text-align: center;
@@ -121,7 +125,6 @@ a.link-disabled{
     text-decoration: none;
     border-bottom: 1px dotted #000;
     margin: 0 4px;
-    font-size:1.04em;
 }
 .index-navbar{
     margin-bottom: 10px;
@@ -167,7 +170,6 @@ a.link-disabled{
     border-bottom: solid black 1px;
     background: #D2B9A6;
     top: 109px;
-    font-size: 11px;
     font-weight: bold;
     padding-left: 20px;
     z-index: 3;
@@ -206,14 +208,12 @@ div.sidemenu{
     left:0;
     height:100%;
     width:15%;
-    font-size: 12px;
     border: 1px solid #D2B9A6;
 }
 div.menu-entry{
     padding: 3px;
     padding-left: 10px;
     border-bottom: 1px solid #F6F1EE;
-    font-size:12px;
 }
 
 .page-content{
@@ -222,7 +222,6 @@ div.menu-entry{
     left: 15%;
     width: 80%;
     margin-bottom: 50px;
-    font-size:18px;
 }
 
 #invitation img{

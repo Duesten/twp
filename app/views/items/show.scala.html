@@ -27,14 +27,17 @@
         <div class="item-frame">
             <div class="item-title">@item.title</div>
             <div class="item-details">
-                <div>Title : @item.title</div>
-                <div>Artist/Author/Creator/Credits : @item.creators</div>
-                <div>Genre : @item.genre</div>
-                <div>Production : @item.production</div>
-                <div>Year : @item.year</div>
-                <div>Country : @item.country</div>
-                <div>Medium : @item.medium</div>
-                <div>Language(s) : @item.lang</div>
+                <div class="col-1">
+                    <div class="item-detail"><span>Title : </span>@item.title</div>
+                    <div class="item-detail"><span>Artist/Author/Creator/Credits : </span>@item.creators</div>
+                    <div class="item-detail"><span>Genre : </span>@item.genre</div>
+                    <div class="item-detail"><span>Production : </span>@item.production</div>
+                    <div class="item-detail"><span>Year : </span>@item.year</div>
+                    <div class="item-detail"><span>Country : </span>@item.country</div>
+                    <div class="item-detail"><span>Medium : </span>@item.medium</div>
+                    <div class="item-detail"><span>Language(s) : </span>@item.lang</div>
+                </div>
+
                 <div>________________________</div>
                 <div>Reservation info :</div>
                 <div>Status : @{if(item.reserved) "Reserved" else "Available"}</div>
