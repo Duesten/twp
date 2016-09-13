@@ -35,22 +35,7 @@ class Items extends Controller {
 
   def textSearch = Action { implicit req =>
 
-<<<<<<< Updated upstream
-    val singleForm = Form(
-      single(
-        "q" -> text
-      )
-    )
 
-    val result = singleForm.bindFromRequest.get
-
-    val items = Item.findAll().filter { item =>
-      (item.description + item.title + item.year + item.creators + item.production + item.year + item.genre + item.extra + item.medium).toLowerCase() contains result.toLowerCase()
-    }
-
-
-    Ok(views.html.items.list(items))
-=======
     val searchedTextForm = Form(single( "q" -> text))
     val searchedText = searchedTextForm.bindFromRequest()
     val i = Item.syntax("i")
@@ -79,7 +64,7 @@ class Items extends Controller {
     }.getOrElse(List.empty)
 
     Ok(views.html.items.list(result))
->>>>>>> Stashed changes
+
   }
 
 }
