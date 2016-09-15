@@ -6,20 +6,35 @@
         }
     </style>
 
+
     <script src="@routes.Assets.versioned("javascripts/onepage/jquery.fullpage.js")" type="text/javascript"></script>
 
     <script>
         $(function(){
-            $('#fullpage').fullpage();
+            $('#fullpage').fullpage({
+                anchors: ['first', 'second', 'third', 'fourth'],
+                menu: '#menu'
+            });
+
         });
     </script>
 
-    <div class="nav">
-
+    <div class="top-bar bg-black border-bottom border-white border-1 txt-white">
+        <div class="fl icon pointer">
+            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </div>
+        <div class="fr icon pointer">
+            <i class="fa fa-calendar-o fa-2x" aria-hidden="true"></i>
+        </div>
     </div>
 
-    <div class="menu">
-
+    <div class="menu-container">
+        <ul id="menu">
+            <li data-menuanchor="first" class="active"><a href="#home"><i class="fa fa-home fa-3x fa-fw" aria-hidden="true"></i></a></li>
+            <li data-menuanchor="second"><a href="#artists"><i class="fa fa-paint-brush fa-3x fa-fw" aria-hidden="true"></i></a></li>
+            <li data-menuanchor="third"><a href="#events"><i class="fa fa-child fa-3x fa-fw" aria-hidden="true"></i></a></li>
+            <li data-menuanchor="fourth"><a href="#about"><i class="fa fa-info fa-3x fa-fw" aria-hidden="true"></i></a></li>
+        </ul>
     </div>
 
     @*lazy load different content once it becomes visible*@
@@ -27,23 +42,23 @@
     <div id="fullpage">
 
         <div id="home" class="section bg-black txt-white">
-            <div class="font-xxl mint-logo centered">
+            <div class="font-xxl mint-logo logo-centered">
                 MINT
             </div>
         </div>
         <div id="artists" class="section bg-white txt-black">
-            <div class="font-xxl mint-logo centered">
+            <div class="font-xxl mint-logo logo-centered">
                 Artists
             </div>
         </div>
         <div id="events" class="section bg-black txt-white">
-            <div class="font-xxl mint-logo centered">
+            <div class="font-xxl mint-logo logo-centered">
                 Events
             </div>
         </div>
         <div id="about" class="section bg-white txt-black">
-            <div class="font-xxl mint-logo centered">
-                About us
+            <div class="font-xxl mint-logo logo-centered">
+                About MINT
             </div>
         </div>
 

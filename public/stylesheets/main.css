@@ -246,6 +246,12 @@ div.menu-entry{
 
 /*Lib rules */
 
+/*Block sizes*/
+
+.fw{
+    width: 100%;
+}
+
 /*Backgrounds*/
 
 
@@ -276,7 +282,15 @@ div.menu-entry{
     position: relative;
 }
 
-.centered{
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+.logo-centered{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -287,10 +301,93 @@ div.menu-entry{
     transform: translate(-50%,-50%);
 }
 
+/*Borders*/
+
+.border-top{
+    border-top: solid;
+}
+.border-right{
+    border-right: solid;
+}
+.border-bottom{
+    border-bottom: solid;
+}
+.border-left{
+    border-left: solid;
+}
+
+/*Border colors*/
+
+.border-white{
+    border-color: white;
+}
+
+.border-black{
+    border-color: black;
+}
+
+/*Border sizes*/
+.border-1{
+    border-width: 1px;
+}
 
 /*Specific rules*/
 
 div.section{
     position: relative;
-    z-index: 9000;
+    height: calc(100% - 35px);
+    width: 100%;
+}
+
+div.top-bar {
+    position: fixed;
+    width: 100%;
+    height: 35px;
+    z-index:4;
+}
+
+div.top-bar .icon{
+    padding: 4px 10px;
+
+}
+
+.menu-container{
+    position: fixed;
+    z-index:3;
+    height:100%;
+    left:20px;
+}
+
+#menu{
+    position: relative;
+    top: calc(50% + 35px );
+    -webkit-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0%,-50%);
+    transform: translate(0,-50%);
+
+}
+ul#menu{
+    padding:5px;
+}
+#menu li{
+    list-style: none;
+    padding-bottom: 40px;
+}
+#menu li.active{
+    zoom: 1.4;
+}
+
+#menu a{
+    font-size:initial;
+    color: #D3D3D3;
+    text-decoration: none;
+    border:none;
+}
+
+/*Cursors*/
+
+.pointer{
+    cursor: pointer;
 }
