@@ -25,7 +25,8 @@ GET     /browse/:category            controllers.Items.showCategory(category : S
 GET     /browse                      controllers.Items.showCategories
 POST    /items/find                  controllers.Items.textSearch
 GET     /items/show/:id              controllers.Items.show(id : Long)
-GET     /about                       controllers.Application.about()
+GET     /about                       controllers.Application.about
+GET     /mint                        controllers.MintPreview.index
 #POST    /items/:id/edit             controllers.Items.edit(id: Long)
 #POST    /items/:id/delete           controllers.Items.delete(id : Long)
 #POST    /items/:id/reserve          controllers.Items.reserve(id : Long)

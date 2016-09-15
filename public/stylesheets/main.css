@@ -243,3 +243,54 @@ div.menu-entry{
     width: 50%;
     float: right;
 }
+
+/*Lib rules */
+
+/*Backgrounds*/
+
+
+.bg-white{
+    background-color: white;
+}
+.bg-black{
+    background-color: black;
+}
+
+/*Text colors*/
+.txt-white{
+    color: white;
+}
+.txt-black{
+    color: black;
+}
+
+/*Font sizes*/
+
+.font-xxl{
+    font-size: 58px;
+}
+
+/*Positioning rules*/
+
+.pos-rel{
+    position: relative;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+
+/*Specific rules*/
+
+div.section{
+    position: relative;
+    z-index: 9000;
+}
