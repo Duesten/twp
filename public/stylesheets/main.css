@@ -20,6 +20,14 @@ a.link-disabled{
 .mt10 {
     margin-top : 10px;
 }
+/*todo refactor name*/
+.mt15{
+    margin-top:15%;
+}
+
+.mt50{
+    margin-top:50px;
+}
 
 .text-centered{
     text-align: center;
@@ -191,9 +199,7 @@ a.link-disabled{
 .m0{
     margin: 0;;
 }
-.mt15{
-    margin-top:15%;
-}
+
 .mb15{
     margin-bottom:15%;
 }
@@ -252,6 +258,14 @@ div.menu-entry{
     width: 100%;
 }
 
+.hw{
+    width:50%;
+}
+
+.minw-500px{
+    min-width: 500px;
+}
+
 /*Backgrounds*/
 
 
@@ -290,7 +304,7 @@ div.menu-entry{
     float: right;
 }
 
-.logo-centered{
+.logo-centered {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -390,4 +404,28 @@ ul#menu{
 
 .pointer{
     cursor: pointer;
+}
+
+#header-image-homepage{
+    position: relative;
+    max-width: 50%;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.centered-translate{
+    padding: 0 20px;
+    position: relative;
+    display: inline-block;
+    clear: both;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
